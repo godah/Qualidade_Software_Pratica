@@ -6,8 +6,9 @@ public class LojaMoto {
 	public static void main(String... argvs) {
 		while (true) {
 			try {
-				String nome = JOptionPane.showInputDialog("Informe a marca (acione [CANCELAR] para sair): ");
-				fabricaMoto(nome);
+				String nome = JOptionPane.showInputDialog("Informe a marca (acione [CANCELAR] para sair):");
+				Moto moto = fabricaMoto(nome);
+				mostrarDadosMoto(moto);
 			} catch (Exception e) {
 				break;
 			}
@@ -15,31 +16,36 @@ public class LojaMoto {
 		System.out.println("\nPROGRAMA FINALIZADO\n");
 	}// main
 
-	private static void fabricaMoto(String nome) {
+	private static Moto fabricaMoto(String nome) {
 		if (nome.equalsIgnoreCase("Honda")) {
-			Moto moto = new Honda();
-			mostrarDadosMoto(moto);
-		}
-		else if(nome.equalsIgnoreCase("Yamaha")) {
-			Moto moto = new Yamaha();
-			mostrarDadosMoto(moto);
+			//Moto moto = new Honda();
+			//mostrarDadosMoto(moto);
+			return new Honda();
+		}else if(nome.equalsIgnoreCase("Yamaha")) {
+			//Moto moto = new Yamaha();
+			//mostrarDadosMoto(moto);
+			return new Yamaha();
 		}else if(nome.equalsIgnoreCase("Suzuki")) {
-			Moto moto = new Suzuki();
-			mostrarDadosMoto(moto);
+			//Moto moto = new Suzuki();
+			//mostrarDadosMoto(moto);
+			return new Suzuki();
 		}else {
 			JOptionPane.showMessageDialog(null,
 					"Somente disponíveis na loja: Honda, Yamaha e Suzuki",
 					"Messagem do programa",
 					JOptionPane.CLOSED_OPTION);
+			return null;
 		}// if
 	}
 
 	private static void mostrarDadosMoto(Moto moto) {
-		JOptionPane.showMessageDialog(null, 
-				"\nNome: "+moto.nome+
-				"\nCilindrada: "+moto.cilindrada+
-				"\nCor: "+moto.cor, "Dados da moto",
-				JOptionPane.CLOSED_OPTION);
+		if(moto != null) {
+			JOptionPane.showMessageDialog(null, 
+					"\nNome: "+moto.nome+
+					"\nCilindrada: "+moto.cilindrada+
+					"\nCor: "+moto.cor, "Dados da moto",
+					JOptionPane.CLOSED_OPTION);
+		}
 	}
 }// class
 
