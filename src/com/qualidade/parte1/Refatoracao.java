@@ -1,4 +1,4 @@
-package pkgRefatoracaoParte1;
+package com.qualidade.parte1;
 
 import java.util.Calendar;
 import java.util.*;
