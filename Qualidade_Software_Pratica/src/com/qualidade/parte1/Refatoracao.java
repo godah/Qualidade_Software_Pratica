@@ -22,12 +22,23 @@ public class Refatoracao {
 			mes = entrada.nextInt();
 			calendario = Calendar.getInstance();
 			mesAtual = calendario.get(Calendar.MONTH) + 1;
-			novaMensalidade = verificarValor(mensalidade, novaMensalidade, mes, mesAtual);
+			
+			novaMensalidade = calcularNovoValor(mensalidade, novaMensalidade, mes, mesAtual);
+			
 			imprimirResultados(mensalidade, novaMensalidade, mes, mesAtual);
 			contador++;
-		} // while
+		}
 		System.out.println("PROGRAMA FINALIZADO!");
-	}// main
+	}
+
+	private static double calcularNovoValor(double mensalidade, double novaMensalidade, int mes, int mesAtual) {
+		if (mes < mesAtual) {
+			double valorCalculado = mensalidade * 1.10;
+			novaMensalidade = valorCalculado;
+		} else if (mes >= mesAtual)
+			novaMensalidade = mensalidade;
+		return novaMensalidade;
+	}
 
 	private static void imprimirResultados(double mensalidade, double novaMensalidade, int mes, int mesAtual) {
 		System.out.println("RESULTADO");
@@ -35,14 +46,5 @@ public class Refatoracao {
 		System.out.println("Referencia: " + mes);
 		System.out.println("Mensalidade: " + mensalidade);
 		System.out.println("Novo valor: " + novaMensalidade);
-	}
-
-	private static double verificarValor(double mensalidade, double novaMensalidade, int mes, int mesAtual) {
-		if (mes < mesAtual) {
-			double valorCalculadoMensalidade = mensalidade * 1.10;
-			novaMensalidade = valorCalculadoMensalidade;
-		} else if (mes >= mesAtual)
-			novaMensalidade = mensalidade;
-		return novaMensalidade;
 	}
 }
