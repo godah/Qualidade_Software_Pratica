@@ -1,18 +1,44 @@
 QUESTÕES
 (1) Quais foram as refatorações correspondentes a FORMATAÇÃO do código?
-	identação
+	-indentação
+	-renomeação de métodos e variáveis
+	-remoção de método por um genérico
+	-substituição de if's para switch case
+	-remoção de comentários irrelevantes
+	-remoção de variáveis não utilizadas
+	 
 
 (2) Foram feitas refatorações de RENAME? Destaque pelo menos duas.
-Rename metodos
-private static Boolean verVPO(String args) >> para existeVooOrigem(String args)
-
-private static Boolean verVPD(String args) >> para existeVooDestino (String 
-
+String "dadosDeEntradaDosVoosCadastradosNoPrograma" para "dadosVoos"
+String "opcao1" para "opcao"
+String "opcao2" para "consultaVoo"
+int "variavelFor" para 'i'
 
 (3) Foi feita refatoração de modo a impedir o bad smell de MAPEAMENTO MENTAL. Justifique.
+Sim, a palavra "variavelFor" utilizada para iteração do for, foi alterada para 'i' que é o padrão universal (i, j, k) 
+
 (4) Ocorreram refatorações de comentários? Quais?
+
+Sim.
+-Comentários antigos sem sentido foram removidos
+-Comentário de inicio e fim de bloco de código foram removidos
+-Comentário explicativo dos métodos verVPO() e verVPD() foram removidos
+
 (5) Foi necessário alguma refatoração de extração de método?
+
+Sim, foram estraídos os métodos:
+-exibeDadosVoos()
+-consultarVooPorNumero()
+-consultarVooPorOrigem()
+-consultarVooPorDestino()
+-exibeDadosVoos()
+-mensagemErro()
+
 (6) Com relação estrutura do programa (particionamento) e uso da OO (orientação a Objetos) há alguma
 implementação a ser feita?
+
+Sim, podemos claramente identificar que pode ser extraído uma classe Voo, com seus atributos.
+
+ 
 (7) QUESTÃO OPCIONAL. Implemente a seguinte alteração na aplicação (veja o diagrama de clases).
 1 Endentação
