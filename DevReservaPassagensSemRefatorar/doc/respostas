@@ -1,0 +1,18 @@
+QUESTÕES
+(1) Quais foram as refatorações correspondentes a FORMATAÇÃO do código?
+	identação
+
+(2) Foram feitas refatorações de RENAME? Destaque pelo menos duas.
+Rename metodos
+private static Boolean verVPO(String args) >> para existeVooOrigem(String args)
+
+private static Boolean verVPD(String args) >> para existeVooDestino (String 
+
+
+(3) Foi feita refatoração de modo a impedir o bad smell de MAPEAMENTO MENTAL. Justifique.
+(4) Ocorreram refatorações de comentários? Quais?
+(5) Foi necessário alguma refatoração de extração de método?
+(6) Com relação estrutura do programa (particionamento) e uso da OO (orientação a Objetos) há alguma
+implementação a ser feita?
+(7) QUESTÃO OPCIONAL. Implemente a seguinte alteração na aplicação (veja o diagrama de clases).
+1 Endentação
