@@ -40,7 +40,7 @@ public class ReservaPassagemAerea {
 								sopcao = JOptionPane.showInputDialog("CONSULTAR VÔO POR ORIGEM DO VÔO\n\n" + "Informe a origem");
 								Boolean verOrigem = true;
 								verOrigem = objVoo.verOrigemVoo(sopcao);
-								if (verOrigem == false) {
+								if (!verOrigem) {
 									JOptionPane.showMessageDialog(null, "Origem não cadastrada no programa. Verifique",
 											"Mensagem do Sistema", JOptionPane.INFORMATION_MESSAGE);
 								} else {
@@ -55,7 +55,7 @@ public class ReservaPassagemAerea {
 								sopcao = JOptionPane.showInputDialog("CONSULTAR VÔO POR DESTINO DO VÔO\n\n" + "Informe a origem");
 								Boolean verDestino = true;
 								verDestino = objVoo.verDestinoVoo(sopcao);
-								if (verDestino == false) {
+								if (!verDestino) {
 									JOptionPane.showMessageDialog(null, "Origem não cadastrada no programa. Verifique",
 											"Mensagem do Sistema", JOptionPane.INFORMATION_MESSAGE);
 								} else {

@@ -3,15 +3,14 @@ QUESTÕES
 	-indentação
 	-renomeação de métodos e variáveis
 	-remoção de método por um genérico
-	-substituição de if's para switch case
 	-remoção de comentários irrelevantes
 	-remoção de variáveis não utilizadas
 	 
 
 (2) Foram feitas refatorações de RENAME? Destaque pelo menos duas.
-String "dadosDeEntradaDosVoosCadastradosNoPrograma" para "dadosVoos"
-String "opcao1" para "opcao"
-String "opcao2" para "consultaVoo"
+String "dadosDeEntradaDosVoosCadastradosNoPrograma" para "dadosVoo"
+String "opcao1" para "opMenuGeral"
+String "opcao2" para "opMenuConsulta"
 int "variavelFor" para 'i'
 
 (3) Foi feita refatoração de modo a impedir o bad smell de MAPEAMENTO MENTAL. Justifique.
@@ -27,12 +26,11 @@ Sim.
 (5) Foi necessário alguma refatoração de extração de método?
 
 Sim, foram estraídos os métodos:
--exibeDadosVoos()
--consultarVooPorNumero()
--consultarVooPorOrigem()
--consultarVooPorDestino()
--exibeDadosVoos()
--mensagemErro()
+-mostrarMenuConsulta()
+-mensagemCancelarErro()
+-mostrarMenuGeral()
+-listagemGeralVoo()
+-mostrarDadosVoo()
 
 (6) Com relação estrutura do programa (particionamento) e uso da OO (orientação a Objetos) há alguma
 implementação a ser feita?
@@ -41,4 +39,4 @@ Sim, podemos claramente identificar que pode ser extraído uma classe Voo, com se
 
  
 (7) QUESTÃO OPCIONAL. Implemente a seguinte alteração na aplicação (veja o diagrama de clases).
-1 Endentação
+OK feito.
